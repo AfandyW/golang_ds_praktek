@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	kalkulator "github.com/AfandyW/kalkultor-test"
+)
 
 func doLoop(any interface{}) { // interface{} menerima semua nilai
 	switch v := any.(type) { // get tipe data dari interface{}
@@ -45,4 +49,8 @@ func main() {
 	mk["kelas C"] = "Penjas"
 
 	doLoop(mk)
+	c := kalkulator.Add(2, 3)
+
+	fmt.Println(c)
+
 }
